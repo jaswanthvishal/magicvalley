@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Gallery</title>
+    <!-- web logo on top -->
+    <link rel="shortcut icon" type="image" href="logo.png" >
+   
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+    background-image: url(gallerywhite.jpg);
+    background-repeat: no-repeat;
+    background-size:auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+   
+  
+</style>
+    </head>
+<body>
+
+<h2 style="text-align:center">"A picture speaks a <u>thousand words</u>."</h2>
+    <h2 style="text-align:center">(Gallery)</h2>
+
+<div class="row">
+    
+  <div class="column">
+    <img src="g1.jpeg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+    
+  <div class="column">
+    <img src="g2.jpeg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="g3.jpeg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="g4.jpeg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+  <br>
+   <hr color="white">
+    <br>
+    <div class="column">
+    <img src="g5.jpeg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+  </div>
+    <div class="column">
+    <img src="g6.jpeg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+  </div>
+    <div class="column">
+    <img src="g7.jpeg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+  </div>
+    <div class="column">
+    <img src="g8.jpeg" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+  </div>
+    <br>
+   <hr color="white">
+    <br>
+    <div class="column">
+    <img src="g9.jpeg" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+  </div>
+    <div class="column">
+    <img src="g10.jpeg" style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+  </div>
+    <div class="column">
+    <img src="g11.jpeg" style="width:100%" onclick="openModal();currentSlide(11)" class="hover-shadow cursor">
+  </div>
+    <div class="column">
+    <img src="g12.jpeg" style="width:100%" onclick="openModal();currentSlide(12)" class="hover-shadow cursor">
+  </div>
+    <br>
+   <hr color="white">
+    <br>
+    <div class="column">
+    <img src="g13.jpeg" style="width:100%" onclick="openModal();currentSlide(13)" class="hover-shadow cursor">
+  </div>
+    <div class="column">
+    <img src="g14.jpeg" style="width:100%" onclick="openModal();currentSlide(14)" class="hover-shadow cursor">
+  </div>
+    <div class="column">
+    <img src="g15.jpeg" style="width:100%" onclick="openModal();currentSlide(15)" class="hover-shadow cursor">
+  </div>
+    <div class="column">
+    <img src="g16.jpeg" style="width:100%" onclick="openModal();currentSlide(16)" class="hover-shadow cursor">
+  </div>
+    <br>
+   <hr color="white">
+    <br>
+    <div class="column">
+    <img src="g17.jpeg" style="width:100%" onclick="openModal();currentSlide(17)" class="hover-shadow cursor">
+  </div>
+    <div class="column">
+    <img src="g18.jpeg" style="width:100%" onclick="openModal();currentSlide(18)" class="hover-shadow cursor">
+  </div>
+    <div class="column">
+    <img src="g19.jpeg" style="width:100%" onclick="openModal();currentSlide(19)" class="hover-shadow cursor">
+  </div>
+    <div class="column">
+    <img src="g20.jpeg" style="width:100%" onclick="openModal();currentSlide(20)" class="hover-shadow cursor">
+  </div>
+      <br>
+   <hr color="white">
+    <br>
+    <div class="column">
+    <img src="g21.jpeg" style="width:100%" onclick="openModal();currentSlide(21)" class="hover-shadow cursor">
+  </div>
+    <div class="column">
+    <img src="g22.jpeg" style="width:100%" onclick="openModal();currentSlide(22)" class="hover-shadow cursor">
+  </div>
+  
+    <div class="column">
+    <img src="g23.JPG" style="width:100%" onclick="openModal();currentSlide(23)" class="hover-shadow cursor">
+  </div>
+     <div class="column">
+    <img src="g24.jpeg" style="width:100%" onclick="openModal();currentSlide(24)" class="hover-shadow cursor">
+  </div>
+
+      <br>
+   <hr color="white">
+    <br>
+    
+  <div class="column">
+    <img src="g25.jpeg" style="width:100%" onclick="openModal();currentSlide(25)" class="hover-shadow cursor">
+  </div>
+    <div class="column">
+    <img src="g26.jpeg" style="width:100%" onclick="openModal();currentSlide(26)" class="hover-shadow cursor">
+  </div>
+    <div class="column">
+    <img src="g27.jpeg" style="width:100%" onclick="openModal();currentSlide(27)" class="hover-shadow cursor">
+  </div>
+    <div class="column">
+    <img src="g28.jpeg" style="width:100%" onclick="openModal();currentSlide(28)" class="hover-shadow cursor">
+  </div>
+   
+    <br>
+   <hr color="white">
+    <br>
+    
+    <div class="column">
+    <img src="g29.jpeg" style="width:100%" onclick="openModal();currentSlide(29)" class="hover-shadow cursor">
+  </div>
+    <div class="column">
+    <img src="g30.jpeg" style="width:100%" onclick="openModal();currentSlide(30)" class="hover-shadow cursor">
+  </div>
+    <div class="column">
+    <img src="g31.jpeg" style="width:100%" onclick="openModal();currentSlide(31)" class="hover-shadow cursor">
+  </div>
+    <div class="column">
+    <img src="g32.jpeg" style="width:100%" onclick="openModal();currentSlide(32)" class="hover-shadow cursor">
+  </div>
+    
+    <br>
+   <hr color="white">
+    <br>
+    
+    <div class="column">
+    <img src="g33.jpeg" style="width:100%" onclick="openModal();currentSlide(33)" class="hover-shadow cursor">
+  </div>
+    <div class="column">
+    <img src="g34.jpeg" style="width:100%" onclick="openModal();currentSlide(34)" class="hover-shadow cursor">
+  </div>
+
+
+    
+     <br>
+   <hr color="white">
+    <br>
+    
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="g1.jpeg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="g2.jpeg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="g3.jpeg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="g4.jpeg" style="width:100%">
+    </div>
+       <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="g5.jpeg" style="width:100%">
+    </div>
+       <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="g6.jpeg" style="width:100%">
+    </div>
+      <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="g7.jpeg" style="width:100%">
+    </div>
+      <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="g8.jpeg" style="width:100%">
+    </div>
+      <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="g9.jpeg" style="width:100%">
+    </div>
+      <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="g10.jpeg" style="width:100%">
+    </div>
+      <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="g11.jpeg" style="width:100%">
+    </div>
+      <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="g12.jpeg" style="width:100%">
+    </div>
+      <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="g13.jpeg" style="width:100%">
+    </div>
+      <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="g14.jpeg" style="width:100%">
+    </div>
+      <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="g15.jpeg" style="width:100%">
+    </div>
+      <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="g16.jpeg" style="width:100%">
+    </div>
+      <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="g17.jpeg" style="width:100%">
+    </div>
+      <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="g18.jpeg" style="width:100%">
+    </div>
+      <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="g19.jpeg" style="width:100%">
+    </div>
+      <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="g20.jpeg" style="width:100%">
+    </div>
+      <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="g21.jpeg" style="width:100%">
+    </div>
+      <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="g22.jpeg" style="width:100%">
+    </div>
+      <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="g23.JPG" style="width:100%">
+    </div>
+      <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="g24.jpeg" style="width:100%">
+    </div>
+      <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="g25.jpeg" style="width:100%">
+    </div>
+      <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="g26.jpeg" style="width:100%">
+    </div>
+      <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="g27.jpeg" style="width:100%">
+    </div>
+      <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="g28.jpeg" style="width:100%">
+    </div>
+      <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="g29.jpeg" style="width:100%">
+    </div>
+      <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="g30.jpeg" style="width:100%">
+    </div>
+      <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="g31.jpeg" style="width:100%">
+    </div>
+      <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="g32.jpeg" style="width:100%">
+    </div>
+      <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="g33.jpeg" style="width:100%">
+    </div>
+      <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="g34.jpeg" style="width:100%">
+    </div>
+
+     
+      
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo cursor" src="g1.jpeg" style="width:100%" onclick="currentSlide(1)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="g2.jpeg" style="width:100%" onclick="currentSlide(2)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="g3.jpeg" style="width:100%" onclick="currentSlide(3)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="g4.jpeg" style="width:100%" onclick="currentSlide(4)" alt="">
+    </div>
+      <div class="column">
+      <img class="demo cursor" src="g5.jpeg" style="width:100%" onclick="currentSlide(5)" alt="">
+    </div>
+      <div class="column">
+      <img class="demo cursor" src="g6.jpeg" style="width:100%" onclick="currentSlide(6)" alt="">
+    </div>
+       <div class="column">
+      <img class="demo cursor" src="g7.jpeg" style="width:100%" onclick="currentSlide(7)" alt="">
+    </div>
+       <div class="column">
+      <img class="demo cursor" src="g8.jpeg" style="width:100%" onclick="currentSlide(8)" alt="">
+    </div>
+       <div class="column">
+      <img class="demo cursor" src="g9.jpeg" style="width:100%" onclick="currentSlide(9)" alt="">
+    </div>
+    
+      <div class="column">
+      <img class="demo cursor" src="g10.jpeg" style="width:100%" onclick="currentSlide(10)" alt="">
+    </div>
+       <div class="column">
+      <img class="demo cursor" src="g11.jpeg" style="width:100%" onclick="currentSlide(11)" alt="">
+    </div>
+       <div class="column">
+      <img class="demo cursor" src="g12.jpeg" style="width:100%" onclick="currentSlide(12)" alt="">
+    </div>
+       <div class="column">
+      <img class="demo cursor" src="g13.jpeg" style="width:100%" onclick="currentSlide(13)" alt="">
+    </div>
+       <div class="column">
+      <img class="demo cursor" src="g14.jpeg" style="width:100%" onclick="currentSlide(14)" alt="">
+    </div>
+       <div class="column">
+      <img class="demo cursor" src="g15.jpeg" style="width:100%" onclick="currentSlide(15)" alt="">
+    </div>
+       <div class="column">
+      <img class="demo cursor" src="g16.jpeg" style="width:100%" onclick="currentSlide(16)" alt="">
+    </div>
+       <div class="column">
+      <img class="demo cursor" src="g17.jpeg" style="width:100%" onclick="currentSlide(17)" alt="">
+    </div>
+       <div class="column">
+      <img class="demo cursor" src="g18.jpeg" style="width:100%" onclick="currentSlide(18)" alt="">
+    </div>
+       <div class="column">
+      <img class="demo cursor" src="g19.jpeg" style="width:100%" onclick="currentSlide(19)" alt="">
+    </div>
+       <div class="column">
+      <img class="demo cursor" src="g20.jpeg" style="width:100%" onclick="currentSlide(20)" alt="">
+    </div>
+       <div class="column">
+      <img class="demo cursor" src="g21.jpeg" style="width:100%" onclick="currentSlide(21)" alt="">
+    </div>
+       <div class="column">
+      <img class="demo cursor" src="g22.jpeg" style="width:100%" onclick="currentSlide(22)" alt="">
+    </div>
+       <div class="column">
+      <img class="demo cursor" src="g23.JPG" style="width:100%" onclick="currentSlide(23)" alt="">
+    </div>
+      <div class="column">
+      <img class="demo cursor" src="g24.jpeg" style="width:100%" onclick="currentSlide(24)" alt="">
+    </div>
+      <div class="column">
+      <img class="demo cursor" src="g25.jpeg" style="width:100%" onclick="currentSlide(25)" alt="">
+    </div>
+      <div class="column">
+      <img class="demo cursor" src="g26.jpeg" style="width:100%" onclick="currentSlide(26)" alt="">
+    </div>
+      <div class="column">
+      <img class="demo cursor" src="g27.jpeg" style="width:100%" onclick="currentSlide(27)" alt="">
+    </div>
+      <div class="column">
+      <img class="demo cursor" src="g28.jpeg" style="width:100%" onclick="currentSlide(28)" alt="">
+    </div>
+      <div class="column">
+      <img class="demo cursor" src="g29.jpeg" style="width:100%" onclick="currentSlide(29)" alt="">
+    </div>
+      <div class="column">
+      <img class="demo cursor" src="g30.jpeg" style="width:100%" onclick="currentSlide(30)" alt="">
+    </div>
+      <div class="column">
+      <img class="demo cursor" src="g31.jpeg" style="width:100%" onclick="currentSlide(31)" alt="">
+    </div>
+      <div class="column">
+      <img class="demo cursor" src="g32.jpeg" style="width:100%" onclick="currentSlide(32)" alt="">
+    </div>
+      <div class="column">
+      <img class="demo cursor" src="g33.jpeg" style="width:100%" onclick="currentSlide(33)" alt="">
+    </div>
+      <div class="column">
+      <img class="demo cursor" src="g34.jpeg" style="width:100%" onclick="currentSlide(34)" alt="">
+    </div>
+
+      
+    
+  </div>
+</div>
+<br>
+    <br>
+     <button style="width:220px;font-size: 20px;background-color: darkkhaki;color: black;border-radius: 20px; border: 1px solid black;box-shadow: 3px 5px 5px black;opacity: 0.8" onclick="goBack()">&lAarr;  Back</button>
+    
+    <br>
+    <br>
+<script>
+    
+    function goBack() {
+  window.history.back();
+}
+    
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+    
+</body>
+</html>
